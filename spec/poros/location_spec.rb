@@ -92,6 +92,6 @@ RSpec.describe Location do
 
     expect(loc).to be_a Location
     expect(loc.lat).to eq(loc_data[:results][0][:locations][0][:latLng][:lat])
-    expect(loc.long).to eq(loc_data[:results][0][:locations][0][:latLng][:long])
+    expect(loc.lng).to eq(loc_data[:results][0][:locations][0][:latLng][:lng])
   end
 end
