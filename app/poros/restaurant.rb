@@ -1,6 +1,8 @@
 class Restaurant
   attr_reader :name,
-              :address
+              :address,
+              :city,
+              :state
 
   def initialize(restaurant_data)
     @name = restaurant_data[:businesses][0][:name]
