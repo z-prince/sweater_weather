@@ -3,8 +3,6 @@ module Api
     class UsersController < ApplicationController
       def create
         user = User.create(user_params)
-        require 'pry'
-        binding.pry
         render json: UserSerializer.new(user), status: :created
       end
 
