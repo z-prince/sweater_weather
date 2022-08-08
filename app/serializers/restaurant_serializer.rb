@@ -1,5 +1,5 @@
 class RestaurantSerializer
-  def format_restaurant(_forecast, restaurant)
+  def self.format_restaurant(forecast, restaurant)
     {
       data: {
         id: 'null',
