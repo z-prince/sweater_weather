@@ -19,10 +19,10 @@ RSpec.describe 'The restaurant API', :vcr do
 
       ##### Forecast expectations #####
 
-      expect(restaurant_data[:attributes][:forecast].keys).to eq(%i[summary temperature])
+      expect(forecast.keys).to eq(%i[summary temperature])
       ##### Restaurant expectations #####
 
-      expect(restaurant_data[:attributes][:restaurant].keys).to eq(%i[name address])
+      expect(restaurant.keys).to eq(%i[name address])
     end
   end
   describe 'sad path' do
