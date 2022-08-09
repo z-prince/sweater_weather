@@ -22,4 +22,22 @@ RSpec.describe 'User requests' do
       expect(User.all.first.email).to eq('coolguy23@aol.com')
     end
   end
+
+  describe 'user login' do
+    it 'can login a user' do
+      params = {
+        'email': 'coolguy23@aol.com',
+        'password': 'verysecret'
+      }
+
+      headers = {
+        'Content_Type': 'application/json',
+        'Accept': 'application/json'
+      }
+
+      post('/api/v1/sessions', headers: headers, params: params.to_json)
+
+      result = JSON.parse(response.body, symbolize_names: true)
+    end
+  end
 end
