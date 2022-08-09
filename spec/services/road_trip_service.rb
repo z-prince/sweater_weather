@@ -6,5 +6,9 @@ RSpec.describe 'Road Trip API' do
 
     expect(parsed_json).to be_a Hash
     expect(parsed_json[:route][:formattedTime]).to be_a String
+    expect(parsed_json[:route][:locations][0][:adminArea5]).to eq('Denver')
+    expect(parsed_json[:route][:locations][0][:adminArea3]).to eq('CO')
+    expect(parsed_json[:route][:locations][1][:adminArea5]).to eq('Pueblo')
+    expect(parsed_json[:route][:locations][1][:adminArea3]).to eq('CO')
   end
 end
