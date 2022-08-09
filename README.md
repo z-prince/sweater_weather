@@ -33,7 +33,8 @@ Thanks for checking out Bone! There are a few ways to access and manipulate data
   * Gets weather for a city
 * *post* /api/v1/road_trip
 
-''' Content-Type: application/json
+``` 
+Content-Type: application/json
 Accept: application/json
 
 body:
@@ -43,7 +44,7 @@ body:
   "destination": "Pueblo,CO",
   "api_key": "jgn983hy48thw9begh98h4539h4"
 }
-'''
+```
   * Creates a road trip
 
 <a name="local-hosting"></a>
