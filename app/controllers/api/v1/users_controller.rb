@@ -3,13 +3,18 @@ module Api
     class UsersController < ApplicationController
       def create
         user = User.new(user_params)
-        render json: UserSerializer.new(user), status: :created
+        if user.save
+          session[:id] = user[:id]
+          render json: UserSerializer.new(user), status: :created
+        else
+          render json: { errors: "Invalid email or passwords don't match" }
+        end
       end
 
       private
 
       def user_params
-        params.require(:user).permit(:email)
+        JSON.parse(request.body.read, symbolize_names: true)
       end
     end
   end
