@@ -15,7 +15,7 @@ Sweater Weather is an API built in Ruby on Rails designed to provide consumers w
 
 <a name="getting-started"></a>
 ## Getting Started
-Thanks for checking out Bone! There are a few ways to access and manipulate data through our API endpoints and a few technologies we used to develop our project. 
+Thanks for checking out Sweater Weather! There are a few ways to access and manipulate data through our API endpoints and a few technologies we used to develop our project. 
 
 <a name="api-endpoints"></a>
 ## API Endpoints
