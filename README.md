@@ -23,8 +23,27 @@ Thanks for checking out Bone! There are a few ways to access and manipulate data
 <a name="user-endpoints"></a>
 ### Users Endpoints
 * *post* /api/v1/users
+```
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "whatever@example.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+```
   * Creates a user
 * *post* /api/v1/sessions
+ ```
+ Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "whatever@example.com",
+  "password": "password"
+}
+```
   * Logs in a user
 
 <a name="weather-endpoints"></a>
