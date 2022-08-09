@@ -1,16 +1,16 @@
 class RoadTripSerializer
-  def self.format_road_trip
+  def self.format_road_trip(trip_data, forecast_data)
     {
       data: {
-        id: null,
+        id: 'null',
         type: 'roadtrip',
         attributes: {
-          start_city: 'Denver, CO',
-          end_city: 'Estes Park, CO',
-          travel_time: '2 hours, 13 minutes',
+          start_city: trip_data.start_city,
+          end_city: trip_data.end_city,
+          travel_time: trip_data.travel_time,
           weather_at_eta: {
-            temperature: 59.4,
-            conditions: 'partly cloudy with a chance of meatballs'
+            temperature: forecast_data.temperature,
+            conditions: forecast_data.conditions
           }
         }
       }
