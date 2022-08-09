@@ -7,7 +7,7 @@ module Api
           session[:id] = user[:id]
           render json: UserSerializer.new(user), status: :created
         else
-          render json: { errors: 'Invalid credentails' }
+          render json: { errors: 'Invalid credentials' }
         end
       end
 
